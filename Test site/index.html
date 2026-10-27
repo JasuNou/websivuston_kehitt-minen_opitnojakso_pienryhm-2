@@ -1,0 +1,161 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jasu Nousiainen</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0f1115;
+      --card: #181b22;
+      --text: #f2f3f5;
+      --muted: #9aa1ad;
+      --accent: #ff7a1a;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Inter", system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    a { color: var(--accent); text-decoration: none; }
+
+    nav {
+      position: sticky; top: 0;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 16px 24px;
+      background: rgba(15, 17, 21, 0.9);
+      backdrop-filter: blur(8px);
+      z-index: 10;
+    }
+    nav .logo { font-weight: 800; font-size: 1.2rem; }
+    nav ul { list-style: none; display: flex; gap: 20px; }
+    nav ul a { color: var(--muted); font-weight: 600; }
+    nav ul a:hover { color: var(--text); }
+
+    header {
+      min-height: 80vh;
+      display: flex; flex-direction: column; justify-content: center; align-items: center;
+      text-align: center;
+      padding: 40px 16px;
+    }
+    .avatar {
+      width: 140px; height: 140px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent), #ffb347);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 3rem; font-weight: 800; color: #111;
+      margin-bottom: 24px;
+    }
+    header h1 { font-size: clamp(2.2rem, 7vw, 4rem); font-weight: 800; line-height: 1.1; }
+    header h1 span { color: var(--accent); }
+    header p { color: var(--muted); font-size: 1.2rem; margin-top: 12px; }
+
+    section { max-width: 900px; margin: 0 auto; padding: 64px 16px; }
+    section h2 { font-size: 2rem; margin-bottom: 24px; }
+    section h2::after {
+      content: ""; display: block; width: 50px; height: 4px;
+      background: var(--accent); margin-top: 8px; border-radius: 2px;
+    }
+
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+    .card {
+      background: var(--card);
+      padding: 28px; border-radius: 16px;
+      transition: transform 0.2s;
+    }
+    .card:hover { transform: translateY(-4px); }
+    .card .icon { font-size: 2.2rem; margin-bottom: 12px; }
+    .card h3 { margin-bottom: 8px; }
+    .card p { color: var(--muted); }
+
+    .contact { text-align: center; }
+    .btn {
+      display: inline-block; margin-top: 16px;
+      padding: 14px 32px; border-radius: 999px;
+      background: var(--accent); color: #111; font-weight: 700;
+    }
+    .btn:hover { opacity: 0.9; }
+
+    footer { text-align: center; color: var(--muted); padding: 32px 16px; font-size: 0.9rem; }
+
+    @media (max-width: 600px) {
+      nav ul { gap: 12px; font-size: 0.9rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">JN</div>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#gym">Gym</a></li>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <div class="avatar">JN</div>
+    <h1>Hi, I'm <span>Jasu Nousiainen</span></h1>
+    <p>Gym goer &bull; K-Citymarket employee</p>
+  </header>
+
+  <section id="about">
+    <h2>About me</h2>
+    <p>
+      I'm Jasu. I spend my days working at K-Citymarket and my free time at the gym.
+      I like staying active, getting stronger and helping people out.
+    </p>
+  </section>
+
+  <section id="gym">
+    <h2>At the gym</h2>
+    <div class="cards">
+      <div class="card">
+        <div class="icon">🏋️</div>
+        <h3>Strength training</h3>
+        <p>Lifting weights and pushing for new personal records.</p>
+      </div>
+      <div class="card">
+        <div class="icon">💪</div>
+        <h3>Consistency</h3>
+        <p>Showing up week after week is what brings results.</p>
+      </div>
+      <div class="card">
+        <div class="icon">🥗</div>
+        <h3>Recovery</h3>
+        <p>Good food, good sleep and rest days matter too.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="work">
+    <h2>Work</h2>
+    <div class="cards">
+      <div class="card">
+        <div class="icon">🛒</div>
+        <h3>K-Citymarket</h3>
+        <p>I work at K-Citymarket, helping customers and keeping the store running smoothly.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2 style="display:inline-block">Contact</h2>
+    <p>Want to get in touch?</p>
+    <a class="btn" href="mailto:jasu.nousiainen@gmail.com">Send me an email</a>
+  </section>
+
+  <footer>
+    &copy; <span id="year"></span> Jasu Nousiainen
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
