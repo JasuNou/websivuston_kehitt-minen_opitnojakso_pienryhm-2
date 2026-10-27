@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+    <html>
+    <head>
+        <title>My First HTML Page</title>
+    </head>
+    <body>
+        <h1>Welcome to my Page</h1>
+        <p>This is a paragraph.</p>
+        <img src="path/to/image.jpg" alt="Description of image">
+    </body>
+    </html>
+<h2>My hobbies</h2>
+    <ol>
+        <li>Gym</li>
+        <li>Tennis</li>
+        <li>Football</li>
+    </ol>
+    
+    <h2>Unordered List</h2>
+    <ul>
+        <li>Gym</li>
+        <li>Tennis</li>
+        <li>Football</li>
+    </ul>
+<a href="https://www.laurea.fi">Visit Laurea</a>
+<table>
+    <tr>
+        <th>Header 1</th>
+        <th>Header 2</th>
+    </tr>
+    <tr>
+        <td>Row 1, Cell 1</td>
+        <td>Row 1, Cell 2</td>
+    </tr>
+    <tr>
+        <td>Row 2, Cell 1</td>
+        <td>Row 2, Cell 2</td>
+    </tr>
+    </table>
+<form>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name"><br><br>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email"><br><br>
+    <input type="submit" value="Submit">
+    </form>
